@@ -79,6 +79,7 @@ class ManageInventory:
     def getInventory(self): # method to get inventory details
         print("Inventory details:") # prompt user to enter inventory details
         for inv in inventoryData: # iterate through inventory list
+            print("-----------------------------") # print separator
             print("Vehicle ID: ", inv.getVehicleID())   # print vehicle ID
             print("Purchase Price: ", inv.getPurchasePrice())   # print purchase price
             print("Sales Price: ", inv.getSalesPrice())  # print sales price
@@ -87,7 +88,7 @@ class ManageInventory:
                 if sr.getVehicleID() == inv.getVehicleID(): # check if vehicle ID matches
                     print("Service ID: ", sr.getServiceID())    # print service ID
                     print("Service Price: ", sr.getServicePrice())  # print service price
-            print("\n") # print new line
+            print("-----------------------------") # print separator
 
     def addServiceRecord(self): # method to add service record details
         temp = entity.ServiceRecord() # create a new service record object
