@@ -118,5 +118,40 @@ class ManageInventory:
         else:   # if service ID not found
             print("Service record not found.") # print error message
 
+# Class to manage Customers
+# This class contains methods to add, update and delete customer details
+# The customer details are stored in a list of customer objects
+# Contributors: Seth Tourish
+# Date: 11/28/2024
+class ManageCustomers:
+    customerData = [] # list of customer objects
 
+    def addCustomer(self): # method to add customer details
+        temp = entity.Customer()    # create a new customer object
+        print("Enter customer details:")    # prompt user to enter customer details
+        temp.setCustomerID(input("Customer ID: "))  # set customer ID
+        temp.setCustomerName(input("Customer Name: "))  # set customer name
+        temp.setAddress(input("Address: "))   # set address
+        customerData.append(temp)   # add customer object to list
+
+    def updateCustomer(self): # method to update customer details
+        print("Update customer details:")   # prompt user to enter customer details
+        custId = input("Enter customer ID to update: ")   # get customer ID to update
+        for cust in customerData:   # iterate through customer list
+            if cust.getCustomerID() == custId:  # check if customer ID matches
+                cust.setCustomerName(input("Customer Name: "))  # update customer name
+                cust.setAddress(input("Address: "))  # update address
+                break
+        else:   # if customer ID not found
+            print("Customer not found.")    # print error message
+
+    def deleteCustomer(self): # method to delete customer details
+        print("Delete customer details:")   # prompt user to enter customer details
+        custId = input("Enter customer ID to delete: ")  # get customer ID to delete
+        for cust in customerData:   # iterate through customer list
+            if cust.getCustomerID() == custId:  # check if customer ID matches
+                customerData.remove(cust)   # remove customer object from list
+                break
+        else:   # if customer ID not found
+            print("Customer not found.")    # print error message
     
