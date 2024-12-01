@@ -62,6 +62,8 @@ class ViewApplicationResults:
                 print("-----------------------------")  # print separator
 
 # Class for the User Interface
+#Contributors: Seth Tourish
+#Date: 12/1/2024
 class UI:
     def menuLogin(self):
         print("-----------------------------")  # print separator
