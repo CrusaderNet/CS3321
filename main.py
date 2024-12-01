@@ -11,6 +11,7 @@ manageInventoryController = control.ManageInventory()
 manageCustomersController = control.ManageCustomers()
 manageInquiryController = control.ManageInquiry()
 userLoginController = control.UserLogin()
+finalizePurchaseController = control.FinalizePurchase()
 
 #Boundary Objects
 # Contributors: Seth Tourish
@@ -39,12 +40,13 @@ while True: # loop until user logs in
         if loggedIn:    # if login is successful
             if (loggedIn and (username[0] == 'E' or username[0] == 'e')):   # if user is employee
                 userType = "Employee"   # set userType to Employee
-                ui.employeeMenuLoop(manageEmployeesController, manageFinancialsController, manageInventoryController, manageCustomersController, manageInquiryController, viewInventoryOBJ, generateFinancialReportOBJ, approveDenyApplicationsOBJ, calcEmployeeCommissionOBJ, viewApplicationResultsOBJ, loggedIn, userType)
+                ui.employeeMenuLoop(manageEmployeesController, manageFinancialsController, manageInventoryController, manageCustomersController, manageInquiryController, viewInventoryOBJ, generateFinancialReportOBJ, approveDenyApplicationsOBJ, calcEmployeeCommissionOBJ, viewApplicationResultsOBJ, finalizePurchaseController, loggedIn, userType)
             elif (loggedIn and (username[0] == 'M' or username[0] == 'm')): # if user is manager
                 userType = "Manager"    # set userType to Manager
+                ui.managerMenuLoop(manageEmployeesController, manageFinancialsController, manageInventoryController, manageCustomersController, manageInquiryController, viewInventoryOBJ, generateFinancialReportOBJ, approveDenyApplicationsOBJ, calcEmployeeCommissionOBJ, viewApplicationResultsOBJ, finalizePurchaseController, loggedIn, userType)
             elif (loggedIn and (username[0] == 'C' or username[0] == 'c')): # if user is customer
                 userType = "Customer"   # set userType to Customer
-                ui.customerMenuLoop(manageEmployeesController, manageFinancialsController, manageInventoryController, manageCustomersController, manageInquiryController, viewInventoryOBJ, generateFinancialReportOBJ, approveDenyApplicationsOBJ, calcEmployeeCommissionOBJ, viewApplicationResultsOBJ, loggedIn, userType)
+                ui.customerMenuLoop(manageEmployeesController, manageFinancialsController, manageInventoryController, manageCustomersController, manageInquiryController, viewInventoryOBJ, generateFinancialReportOBJ, approveDenyApplicationsOBJ, calcEmployeeCommissionOBJ, viewApplicationResultsOBJ, finalizePurchaseController, loggedIn, userType)
         else:   # if login is unsuccessful
             print("Login Failed, Please Retry") # print login failed message
             continue    # continue loop
@@ -52,13 +54,3 @@ while True: # loop until user logs in
         break   # break loop
     else:   # if user enters invalid choice
         print("Invalid Choice")   # print invalid choice message
-
-# Customer Menus
-# This loop will display the customer UI Menus based on the user type
-# Contributors: Seth Tourish
-# Date: 12/1/2024
-
-
-# Manager Menus
-while (loggedIn and inputChoice != "0" and userType == "Manager"):
-    inputChoice = ui.menuMainManager()

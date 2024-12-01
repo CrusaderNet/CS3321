@@ -309,7 +309,7 @@ class Receipt:
 # Contributors: Seth Tourish
 # Date: 11/28/2024
 class FinancialRecord:
-    budget = 0.0    # budget of the company
+    budget = 0.0   # budget of the company
     revenue = 0.0   # revenue of the company
     expenses = 0.0  # expenses of the company
 

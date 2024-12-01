@@ -11,7 +11,7 @@ class ManageEmployees:
     def addEmployee(self): # method to add employee details
         temp = entity.Employee() # create a new employee object
         print("Enter employee details:") # prompt user to enter employee details
-        temp.setEmployeeId(input("Employee ID: "))  # set employee ID
+        temp.setEmployeeID(input("Employee ID: "))  # set employee ID
         temp.setEmployeeName(input("Employee Name: ")) # set employee name
         temp.setCommissions(input("Commissions: ")) # set commissions
         self.employeeData.append(temp) # add employee object to list
@@ -20,7 +20,7 @@ class ManageEmployees:
         print("Update employee details:") # prompt user to enter employee details
         empId = input("Enter employee ID to update: ") # get employee ID to update
         for emp in self.employeeData: # iterate through employee list
-            if emp.getEmployeeId() == empId: # check if employee ID matches
+            if emp.getEmployeeID() == empId: # check if employee ID matches
                 emp.setEmployeeName(input("Employee Name: ")) # update employee name
                 emp.setCommissions(input("Commissions: ")) # update commissions
                 break
@@ -31,7 +31,7 @@ class ManageEmployees:
         print("Delete employee details:") # prompt user to enter employee details
         empId = input("Enter employee ID to delete: ") # get employee ID to delete
         for emp in self.employeeData: # iterate through employee list
-            if emp.getEmployeeId() == empId: # check if employee ID matches
+            if emp.getEmployeeID() == empId: # check if employee ID matches
                 self.employeeData.remove(emp) # remove employee object from list
                 break
         else: # if employee ID not found
@@ -145,6 +145,16 @@ class ManageCustomers:
         else:   # if customer ID not found
             print("Customer not found.")    # print error message
 
+# Class to Finalize Purchase
+# This class contains a method to finalize purchase and set commissions
+# Contributors: Seth Tourish
+# Date: 11/30/2024
+class FinalizePurchase:
+    def FinalizePurchase(self, manageFinancialObj, calcEmployeeCommissionOBJ):    # method to finalize purchase
+        manageFinancialObj.addSales()  # call addSales method
+        manageFinancialObj.salesData[-1].setCommissions(calcEmployeeCommissionOBJ.calcEmployeeComm(float(manageFinancialObj.salesData[-1].getPrice())))    # set commissions
+        manageFinancialObj.addReceipt()    # call addReceipt method
+
 # Class to Manage Financials
 # This class contains methods to add, update and delete receipt, lease, sales, financial and application details
 # The receipt details are stored in a list of receipt objects, lease details are stored in a list of lease objects, sales details are stored in a list of sales objects, 
@@ -227,12 +237,11 @@ class ManageFinancials:
     def addSales(self): # method to add sales details
         temp = entity.Sales()   # create a new sales object
         print("Enter sales details:")   # prompt user to enter sales details
-        temp.setSalesID(input("Sales ID: "))    # set sales ID
+        temp.setSaleID(input("Sales ID: "))    # set sales ID
         temp.setEmployeeID(input("Employee ID: "))    # set employee ID
         temp.setCustomerID(input("Customer ID: "))    # set customer ID
         temp.setLeaseID(input("Lease ID: "))  # set lease ID
         temp.setApplicationID(input("Application ID: "))  # set application ID
-        temp.setCommissions(input("Commissions: "))    # set commissions
         temp.setReceiptID(input("Receipt ID: "))    # set receipt ID
         temp.setPrice(input("Price: "))    # set price
         self.salesData.append(temp)  # add sales object to list
@@ -241,7 +250,7 @@ class ManageFinancials:
         print("Update sales details:")  # prompt user to enter sales details
         salesId = input("Enter sales ID to update: ")   # get sales ID to update
         for sal in self.salesData:   # iterate through sales list
-            if sal.getSalesID() == salesId: # check if sales ID matches
+            if sal.getSaleID() == salesId: # check if sales ID matches
                 sal.setEmployeeID(input("Employee ID: "))    # update employee ID
                 sal.setCustomerID(input("Customer ID: "))   # update customer ID
                 sal.setLeaseID(input("Lease ID: ")) # update lease ID
@@ -257,7 +266,7 @@ class ManageFinancials:
         print("Delete sales details:")  # prompt user to enter sales details
         salesId = input("Enter sales ID to delete: ")   # get sales ID to delete
         for sal in self.salesData:   # iterate through sales list
-            if sal.getSalesID() == salesId: # check if sales ID matches
+            if sal.getSaleID() == salesId: # check if sales ID matches
                 self.salesData.remove(sal)   # remove sales object from list
                 break
         else:   # if sales ID not found
@@ -266,9 +275,9 @@ class ManageFinancials:
     def addFinancial(self): # method to add financial details
         temp = entity.FinancialRecord()   # create a new financial object
         print("Enter financial details:")    # prompt user to enter financial details
-        temp.setBudget(input("Budget: "))    # set budget
-        temp.setRevenue(input("Revenue: "))  # set revenue
-        temp.setExpenses(input("Expenses: "))    # set expenses
+        temp.setBudget(float(input("Budget: ")))   # set budget
+        temp.setRevenue(float(input("Revenue: ")))  # set revenue
+        temp.setExpenses(float(input("Expenses: ")))    # set expenses
         self.financialData.append(temp)  # add financial object to list
 
     def deleteFinancial(self):  # method to delete financial details
@@ -328,8 +337,10 @@ class ManageFinancials:
         else:   # if sales ID not found
             print("Sales not found.")   # print error message
 
-    def getFinancial(self) -> entity.FinancialRecord:   # Method to return the most recent financial record
-        return self.financialData[-1]
+    def getFinancial(self) -> entity.FinancialRecord:
+        if not self.financialData:  # Check if the list is empty
+            return None  # Return None or handle it as per your application logic
+        return self.financialData[-1]  # Return the most recent financial record
 
 # Class to Manage Inquiries
 # This class contains methods to add and print inquiry details

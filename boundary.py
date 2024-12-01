@@ -19,11 +19,15 @@ class ViewInventory:
 # Date: 12/1/2024
 class GenerateFinancialReport:
     def generateReport(self, financialObject):
-         print("Budget: ", financialObject.getBudget()) # print budget
-         print("Revenue: ", financialObject.getRevenue()) # print revenue
-         print("Expenses: ", financialObject.getExpenses()) # print expenses
-         print("Profit: ", financialObject.getRevenue() - financialObject.getExpenses()) # print profit
-         print("-----------------------------") # print separator
+        if financialObject is None:  # Check if financialObject is None
+            print("No financial data available to generate the report.")
+            print("-----------------------------")
+            return
+        print("Budget: ", financialObject.getBudget())  # Print budget
+        print("Revenue: ", financialObject.getRevenue())  # Print revenue
+        print("Expenses: ", financialObject.getExpenses())  # Print expenses
+        print("Profit: ", financialObject.getRevenue() - financialObject.getExpenses())  # Print profit
+        print("-----------------------------")  # Print separator
 
 # Class to Approve or Deny Applications
 # This class will be used to approve or deny applications
@@ -45,8 +49,8 @@ class ApproveDenyApplications:
 # Contributors: Seth Tourish
 # Date: 12/1/2024
 class CalculateEmployeeCommission:
-    def calcEmployeeComm(self, saleObject : entity.Sales) -> float:
-        return saleObject.getSalesPrice() * 0.10 # return 10% of sales price
+    def calcEmployeeComm(self, price : float) -> float:
+        return price * 0.10 # return 10% of sales price
 
 # Class to View Application Results
 # This class will be used to view application results
@@ -110,6 +114,7 @@ class UI:
         print("4. Employee Information")
         print("5. Applications")
         print("6. Sales")
+        print("7. Finalize Purchase")
         print("0. Logout")
         inputChoice = input("Enter Choice: ")
         print("-----------------------------")
@@ -233,6 +238,7 @@ class UI:
         print("Applications")
         print("1. Add Application")
         print("2. Update Application")
+        print("3. View Application Status")
         print("0. Back")
         inputChoice = input("Enter Choice: ")
         print("-----------------------------")
@@ -306,7 +312,7 @@ class UI:
     # viewApplicationResultsOBJ, loggedIn, userType
     # Contributors: Seth Tourish
     # Date: 12/1/2024
-    def customerMenuLoop(self, manageEmployeesController, manageFinancialsController, manageInventoryController, manageCustomersController, manageInquiryController, viewInventoryOBJ, generateFinancialReportOBJ, approveDenyApplicationsOBJ, calcEmployeeCommissionOBJ, viewApplicationResultsOBJ, loggedIn, userType):
+    def customerMenuLoop(self, manageEmployeesController, manageFinancialsController, manageInventoryController, manageCustomersController, manageInquiryController, viewInventoryOBJ, generateFinancialReportOBJ, approveDenyApplicationsOBJ, calcEmployeeCommissionOBJ, viewApplicationResultsOBJ, finalizePurchaseController, loggedIn, userType):
         while (loggedIn and userType == "Customer"):
             inputChoice = self.menuMainCustomer()
             if inputChoice == "1":
@@ -335,6 +341,8 @@ class UI:
                     manageFinancialsController.addApplication()
                 elif inputChoiceTwo == "2":
                     manageFinancialsController.updateApplication()
+                elif inputChoiceTwo == "3":
+                    viewApplicationResultsOBJ.viewResult(manageFinancialsController)
                 elif inputChoiceTwo == "0":
                     continue
             elif inputChoice == "5":
@@ -361,7 +369,7 @@ class UI:
     # viewApplicationResultsOBJ, loggedIn, userType
     # Contributors: Seth Tourish
     # Date: 12/1/2024
-    def employeeMenuLoop(self, manageEmployeesController, manageFinancialsController, manageInventoryController, manageCustomersController, manageInquiryController, viewInventoryOBJ, generateFinancialReportOBJ, approveDenyApplicationsOBJ, calcEmployeeCommissionOBJ, viewApplicationResultsOBJ, loggedIn, userType):
+    def employeeMenuLoop(self, manageEmployeesController, manageFinancialsController, manageInventoryController, manageCustomersController, manageInquiryController, viewInventoryOBJ, generateFinancialReportOBJ, approveDenyApplicationsOBJ, calcEmployeeCommissionOBJ, viewApplicationResultsOBJ, finalizePurchaseController, loggedIn, userType):
         while (loggedIn and userType == "Employee"):
             inputChoice = self.menuMainEmployee()
             if inputChoice == "1":
@@ -371,7 +379,7 @@ class UI:
                 elif inputChoiceTwo == "2":
                     manageInventoryController.addInventory()
                 elif inputChoiceTwo == "3":
-                    manageInventoryController.removeInventory()
+                    manageInventoryController.deleteInventory()
                 elif inputChoiceTwo == "4":
                     manageInventoryController.updateInventory()
                 elif inputChoiceTwo == "0":
@@ -422,11 +430,11 @@ class UI:
             elif inputChoice == "6":
                 inputChoiceTwo = self.menuSalesStaff()
                 if inputChoiceTwo == "1":
-                    manageFinancialsController.addSale()
+                    manageFinancialsController.addSales()
                 elif inputChoiceTwo == "2":
-                    manageFinancialsController.deleteSale()
+                    manageFinancialsController.deleteSales()
                 elif inputChoiceTwo == "3":
-                    manageFinancialsController.updateSale()
+                    manageFinancialsController.updateSales()
                 elif inputChoiceTwo == "4":
                     manageFinancialsController.addLease()
                 elif inputChoiceTwo == "5":
@@ -439,6 +447,110 @@ class UI:
                     manageFinancialsController.updateReceipt()
                 elif inputChoiceTwo == "9":
                     manageFinancialsController.deleteReceipt()
+                elif inputChoiceTwo == "0":
+                    continue
+            elif inputChoice == "7":
+                finalizePurchaseController.FinalizePurchase(manageFinancialsController, calcEmployeeCommissionOBJ)
+            elif inputChoice == "0":
+                break
+            else:
+                print("Invalid Choice")
+
+    # Manager Menu Loop. a Method for the UI class that will display
+    # the manager UI Menus and deal with inputs
+    # Parameters are the manageEmployeesController, manageFinancialsController, manageInventoryController, manageCustomersController,
+    # manageInquiryController, viewInventoryOBJ, generateFinancialReportOBJ, approveDenyApplicationsOBJ, calcEmployeeCommissionOBJ,
+    # viewApplicationResultsOBJ, loggedIn, userType
+    # Contributors: Seth Tourish
+    # Date: 12/1/2024
+    def managerMenuLoop(self, manageEmployeesController, manageFinancialsController, manageInventoryController, manageCustomersController, manageInquiryController, viewInventoryOBJ, generateFinancialReportOBJ, approveDenyApplicationsOBJ, calcEmployeeCommissionOBJ, viewApplicationResultsOBJ, finalizePurchaseController, loggedIn, userType):
+        while (loggedIn and userType == "Manager"):
+            inputChoice = self.menuMainManager()
+            if inputChoice == "1":
+                inputChoiceTwo = self.menuInventoryStaff()
+                if inputChoiceTwo == "1":
+                    viewInventoryOBJ.viewInventory(manageInventoryController.inventoryData)
+                elif inputChoiceTwo == "2":
+                    manageInventoryController.addInventory()
+                elif inputChoiceTwo == "3":
+                    manageInventoryController.deleteInventory()
+                elif inputChoiceTwo == "4":
+                    manageInventoryController.updateInventory()
+                elif inputChoiceTwo == "0":
+                    continue
+            elif inputChoice == "2":
+                inputChoiceTwo = self.menuInquiriesStaff()
+                if inputChoiceTwo == "1":
+                    for inquiry in manageInquiryController.inquiryData:
+                        print("Customer ID: " + inquiry.customerID)
+                        print("Vehicle ID: " + inquiry.vehicleID)
+                        print("###############")
+                elif inputChoiceTwo == "0":
+                    continue
+            elif inputChoice == "3":
+                inputChoiceTwo = self.menuCustomerInfoStaff()
+                if inputChoiceTwo == "1":
+                    manageCustomersController.addCustomer()
+                elif inputChoiceTwo == "2":
+                    manageCustomersController.updateCustomer()
+                elif inputChoiceTwo == "3":
+                    manageCustomersController.deleteCustomer()
+                elif inputChoiceTwo == "0":
+                    continue
+            elif inputChoice == "4":
+                inputChoiceTwo = self.menuEmployeeInfoStaff()
+                if inputChoiceTwo == "1":
+                    manageEmployeesController.addEmployee()
+                elif inputChoiceTwo == "2":
+                    manageEmployeesController.updateEmployee()
+                elif inputChoiceTwo == "3":
+                    manageEmployeesController.deleteEmployee()
+                elif inputChoiceTwo == "0":
+                    continue
+            elif inputChoice == "5":
+                inputChoiceTwo = self.menuApplicationsStaff()
+                if inputChoiceTwo == "1":
+                    manageFinancialsController.addApplication()
+                elif inputChoiceTwo == "2":
+                    manageFinancialsController.deleteApplication()
+                elif inputChoiceTwo == "3":
+                    appID = input("Enter Application ID to Approve: ")
+                    approveDenyApplicationsOBJ.approveApplication(appID, manageFinancialsController)
+                elif inputChoiceTwo == "4":
+                    appID = input("Enter Application ID to Deny: ")
+                    approveDenyApplicationsOBJ.denyApplication(appID, manageFinancialsController)
+                elif inputChoiceTwo == "0":
+                    continue
+            elif inputChoice == "6":
+                inputChoiceTwo = self.menuSalesStaff()
+                if inputChoiceTwo == "1":
+                    manageFinancialsController.addSales()
+                elif inputChoiceTwo == "2":
+                    manageFinancialsController.deleteSales()
+                elif inputChoiceTwo == "3":
+                    manageFinancialsController.updateSales()
+                elif inputChoiceTwo == "4":
+                    manageFinancialsController.addLease()
+                elif inputChoiceTwo == "5":
+                    manageFinancialsController.updateLease()
+                elif inputChoiceTwo == "6":
+                    manageFinancialsController.deleteLease()
+                elif inputChoiceTwo == "7":
+                    manageFinancialsController.addReceipt()
+                elif inputChoiceTwo == "8":
+                    manageFinancialsController.updateReceipt()
+                elif inputChoiceTwo == "9":
+                    manageFinancialsController.deleteReceipt()
+                elif inputChoiceTwo == "0":
+                    continue
+            elif inputChoice == "7":
+                inputChoiceTwo = self.menuFinancialsManager()
+                if inputChoiceTwo == "1":
+                    manageFinancialsController.addFinancial()
+                elif inputChoiceTwo == "2":
+                    manageFinancialsController.deleteFinancial()
+                elif inputChoiceTwo == "3":
+                    generateFinancialReportOBJ.generateReport(manageFinancialsController.getFinancial())    
                 elif inputChoiceTwo == "0":
                     continue
             elif inputChoice == "0":
