@@ -14,12 +14,12 @@ class ManageEmployees:
         temp.setEmployeeId(input("Employee ID: "))  # set employee ID
         temp.setEmployeeName(input("Employee Name: ")) # set employee name
         temp.setCommissions(input("Commissions: ")) # set commissions
-        employeeData.append(temp) # add employee object to list
+        self.employeeData.append(temp) # add employee object to list
 
     def updateEmployee(self): # method to update employee details
         print("Update employee details:") # prompt user to enter employee details
         empId = input("Enter employee ID to update: ") # get employee ID to update
-        for emp in employeeData: # iterate through employee list
+        for emp in self.employeeData: # iterate through employee list
             if emp.getEmployeeId() == empId: # check if employee ID matches
                 emp.setEmployeeName(input("Employee Name: ")) # update employee name
                 emp.setCommissions(input("Commissions: ")) # update commissions
@@ -30,9 +30,9 @@ class ManageEmployees:
     def deleteEmployee(self): # method to delete employee details
         print("Delete employee details:") # prompt user to enter employee details
         empId = input("Enter employee ID to delete: ") # get employee ID to delete
-        for emp in employeeData: # iterate through employee list
+        for emp in self.employeeData: # iterate through employee list
             if emp.getEmployeeId() == empId: # check if employee ID matches
-                employeeData.remove(emp) # remove employee object from list
+                self.employeeData.remove(emp) # remove employee object from list
                 break
         else: # if employee ID not found
             print("Employee not found.") # print error message
@@ -52,12 +52,12 @@ class ManageInventory:
         temp.setVehicleID(input("Vehicle ID: ")) # set vehicle ID
         temp.setPurchasePrice(input("Purchase Price: ")) # set purchase price
         temp.setSalesPrice(input("Sales Price: ")) # set sales price
-        inventoryData.append(temp) # add inventory object to list
+        self.inventoryData.append(temp) # add inventory object to list
 
     def updateInventory(self): # method to update inventory details
         print("Update inventory details:") # prompt user to enter inventory details
         vehicleId = input("Enter vehicle ID to update: ") # get vehicle ID to update
-        for inv in inventoryData: # iterate through inventory list
+        for inv in self.inventoryData: # iterate through inventory list
             if inv.getVehicleID() == vehicleId: # check if vehicle ID matches 
                 inv.setPurchasePrice(input("Purchase Price: "))  # update purchase price
                 inv.setSalesPrice(input("Sales Price: ")) # update sales price
@@ -68,38 +68,29 @@ class ManageInventory:
     def deleteInventory(self): # method to delete inventory details
         print("Delete inventory details:") # prompt user to enter inventory details
         vehicleId = input("Enter vehicle ID to delete: ") # get vehicle ID to delete
-        for inv in inventoryData: # iterate through inventory list
+        for inv in self.inventoryData: # iterate through inventory list
             if inv.getVehicleID() == vehicleId: # check if vehicle ID matches
-                inventoryData.remove(inv) # remove inventory object from list
+                self.inventoryData.remove(inv) # remove inventory object from list
                 break 
         else: # if vehicle ID not found
             print("Vehicle not found.") # print error message
 
-    def getInventory(self): # method to get inventory details
-        print("Inventory details:") # prompt user to enter inventory details
-        for inv in inventoryData: # iterate through inventory list
-            print("Vehicle ID: ", inv.getVehicleID())   # print vehicle ID
-            print("Purchase Price: ", inv.getPurchasePrice())   # print purchase price
-            print("Sales Price: ", inv.getSalesPrice())  # print sales price
-            print("Service Record: ")   # print service record details
-            for sr in serviceRecordData:    # iterate through service record list
-                if sr.getVehicleID() == inv.getVehicleID(): # check if vehicle ID matches
-                    print("Service ID: ", sr.getServiceID())    # print service ID
-                    print("Service Price: ", sr.getServicePrice())  # print service price
-            print("-----------------------------") # print separator
-
+    #method to return array of inventory objects
+    def getInventory(self):
+        return self.inventoryData 
+    
     def addServiceRecord(self): # method to add service record details
         temp = entity.ServiceRecord() # create a new service record object
         print("Enter service record details:")  # prompt user to enter service record details
         temp.setServiceID(input("Service ID: "))    # set service ID
         temp.setVehicleID(input("Vehicle ID: "))    # set vehicle ID
         temp.setServicePrice(input("Service Price: "))  # set service price
-        serviceRecordData.append(temp)  # add service record object to list
+        self.serviceRecordData.append(temp)  # add service record object to list
 
     def updateServiceRecord(self): # method to update service record details
         print("Update service record details:") # prompt user to enter service record details
         serviceId = input("Enter service ID to update: ")   # get service ID to update
-        for sr in serviceRecordData:    # iterate through service record list
+        for sr in self.serviceRecordData:    # iterate through service record list
             if sr.getServiceID() == serviceId:  # check if service ID matches
                 sr.setVehicleID(input("Vehicle ID: "))  # update vehicle ID
                 sr.setServicePrice(input("Service Price: "))    # update service price
@@ -110,9 +101,9 @@ class ManageInventory:
     def deleteServiceRecord(self): # method to delete service record details
         print("Delete service record details:") # prompt user to enter service record details
         serviceId = input("Enter service ID to delete: ")   # get service ID to delete
-        for sr in serviceRecordData:    # iterate through service record list
+        for sr in self.serviceRecordData:    # iterate through service record list
             if sr.getServiceID() == serviceId:  # check if service ID matches
-                serviceRecordData.remove(sr)    # remove service record object from list
+                self.serviceRecordData.remove(sr)    # remove service record object from list
                 break
         else:   # if service ID not found
             print("Service record not found.") # print error message
@@ -131,12 +122,12 @@ class ManageCustomers:
         temp.setCustomerID(input("Customer ID: "))  # set customer ID
         temp.setCustomerName(input("Customer Name: "))  # set customer name
         temp.setAddress(input("Address: "))   # set address
-        customerData.append(temp)   # add customer object to list
+        self.customerData.append(temp)   # add customer object to list
 
     def updateCustomer(self): # method to update customer details
         print("Update customer details:")   # prompt user to enter customer details
         custId = input("Enter customer ID to update: ")   # get customer ID to update
-        for cust in customerData:   # iterate through customer list
+        for cust in self.customerData:   # iterate through customer list
             if cust.getCustomerID() == custId:  # check if customer ID matches
                 cust.setCustomerName(input("Customer Name: "))  # update customer name
                 cust.setAddress(input("Address: "))  # update address
@@ -147,9 +138,9 @@ class ManageCustomers:
     def deleteCustomer(self): # method to delete customer details
         print("Delete customer details:")   # prompt user to enter customer details
         custId = input("Enter customer ID to delete: ")  # get customer ID to delete
-        for cust in customerData:   # iterate through customer list
+        for cust in self.customerData:   # iterate through customer list
             if cust.getCustomerID() == custId:  # check if customer ID matches
-                customerData.remove(cust)   # remove customer object from list
+                self.customerData.remove(cust)   # remove customer object from list
                 break
         else:   # if customer ID not found
             print("Customer not found.")    # print error message
@@ -174,12 +165,12 @@ class ManageFinancials:
         temp.setCustomerID(input("Customer ID: "))  # set customer ID
         temp.setPrice(input("Price: ")) # set price
         temp.setLeaseID(input("Lease ID: ")) # set lease ID
-        receiptData.append(temp)
+        self.receiptData.append(temp)
     
     def updateReceipt(self): # method to update receipt details
         print("Update receipt details:")    # prompt user to enter receipt details
         salesId = input("Enter sales ID to update: ")   # get sales ID to update
-        for rec in receiptData: # iterate through receipt list
+        for rec in self.receiptData: # iterate through receipt list
             if rec.getSalesID() == salesId: # check if sales ID matches
                 rec.setCustomerID(input("Customer ID: "))   # update customer ID
                 rec.setPrice(input("Price: "))  # update price
@@ -191,9 +182,9 @@ class ManageFinancials:
     def deleteReceipt(self): # method to delete receipt details
         print("Delete receipt details:")    # prompt user to enter receipt details
         salesId = input("Enter sales ID to delete: ")   # get sales ID to delete
-        for rec in receiptData: # iterate through receipt list
+        for rec in self.receiptData: # iterate through receipt list
             if rec.getSalesID() == salesId: # check if sales ID matches
-                receiptData.remove(rec) # remove receipt object from list
+                self.receiptData.remove(rec) # remove receipt object from list
                 break
         else:   # if sales ID not found
             print("Receipt not found.")
@@ -207,12 +198,12 @@ class ManageFinancials:
         temp.setMonthlyPayment(input("Monthly Payment: "))  # set monthly payment
         temp.setPrice(input("Price: ")) # set price
         temp.setTermLength(input("Term Length: "))  # set term length
-        leaseData.append(temp)  # add lease object to list
+        self.leaseData.append(temp)  # add lease object to list
     
     def updateLease(self): # method to update lease details
         print("Update lease details:")  # prompt user to enter lease details
         leaseId = input("Enter lease ID to update: ")   # get lease ID to update
-        for lea in leaseData:   # iterate through lease list
+        for lea in self.leaseData:   # iterate through lease list
             if lea.getLeaseID() == leaseId: # check if lease ID matches
                 lea.setCustomerID(input("Customer ID: "))  # update customer ID
                 lea.setVehicleID(input("Vehicle ID: "))   # update vehicle ID
@@ -226,9 +217,9 @@ class ManageFinancials:
     def deleteLease(self): # method to delete lease details
         print("Delete lease details:")  # prompt user to enter lease details
         leaseId = input("Enter lease ID to delete: ")   # get lease ID to delete
-        for lea in leaseData:   # iterate through lease list
+        for lea in self.leaseData:   # iterate through lease list
             if lea.getLeaseID() == leaseId: # check if lease ID matches
-                leaseData.remove(lea)   # remove lease object from list
+                self.leaseData.remove(lea)   # remove lease object from list
                 break
         else:   # if lease ID not found
             print("Lease not found.")   # print error message
@@ -244,12 +235,12 @@ class ManageFinancials:
         temp.setCommissions(input("Commissions: "))    # set commissions
         temp.setReceiptID(input("Receipt ID: "))    # set receipt ID
         temp.setPrice(input("Price: "))    # set price
-        salesData.append(temp)  # add sales object to list
+        self.salesData.append(temp)  # add sales object to list
 
     def updateSales(self): # method to update sales details
         print("Update sales details:")  # prompt user to enter sales details
         salesId = input("Enter sales ID to update: ")   # get sales ID to update
-        for sal in salesData:   # iterate through sales list
+        for sal in self.salesData:   # iterate through sales list
             if sal.getSalesID() == salesId: # check if sales ID matches
                 sal.setEmployeeID(input("Employee ID: "))    # update employee ID
                 sal.setCustomerID(input("Customer ID: "))   # update customer ID
@@ -265,9 +256,9 @@ class ManageFinancials:
     def deleteSales(self): # method to delete sales details
         print("Delete sales details:")  # prompt user to enter sales details
         salesId = input("Enter sales ID to delete: ")   # get sales ID to delete
-        for sal in salesData:   # iterate through sales list
+        for sal in self.salesData:   # iterate through sales list
             if sal.getSalesID() == salesId: # check if sales ID matches
-                salesData.remove(sal)   # remove sales object from list
+                self.salesData.remove(sal)   # remove sales object from list
                 break
         else:   # if sales ID not found
             print("Sales not found.")   # print error message
@@ -278,12 +269,12 @@ class ManageFinancials:
         temp.setBudget(input("Budget: "))    # set budget
         temp.setRevenue(input("Revenue: "))  # set revenue
         temp.setExpenses(input("Expenses: "))    # set expenses
-        financialData.append(temp)  # add financial object to list
+        self.financialData.append(temp)  # add financial object to list
 
     def deleteFinancial(self):  # method to delete financial details
         print("Delete financial details:")   # prompt user to enter financial details 
-        for fin in financialData:   # iterate through financial list
-            financialData.remove(fin)   # remove financial object from list 
+        for fin in self.financialData:   # iterate through financial list
+            self.financialData.remove(fin)   # remove financial object from list 
 
     def addApplication(self):   # method to add application details
         temp = entity.Application()
@@ -294,12 +285,12 @@ class ManageFinancials:
         temp.setCreditScore(input("Credit Score: "))    # set credit score
         temp.setPrice(input("Price: "))    # set price 
         temp.setIncome(input("Income: "))  # set income
-        applicationData.append(temp)
+        self.applicationData.append(temp)
 
     def updateApplication(self):    # method to update application details
         print("Update application details:")    # prompt user to enter application details
         appId = input("Enter application ID to update: ")   # get application ID to update
-        for app in applicationData: # iterate through application list
+        for app in self.applicationData: # iterate through application list
             if app.getApplicationID() == appId: # check if application ID matches
                 app.setCustomerID(input("Customer ID: "))    # update customer ID
                 app.setSaleID(input("Sale ID: "))   # update sale ID
@@ -313,15 +304,15 @@ class ManageFinancials:
     def deleteApplication(self):    # method to delete application details
         print("Delete application details:")    # prompt user to enter application details
         appId = input("Enter application ID to delete: ")   # get application ID to delete
-        for app in applicationData: # iterate through application list
+        for app in self.applicationData: # iterate through application list
             if app.getApplicationID() == appId: # check if application ID matches
-                applicationData.remove(app) # remove application object from list
+                self.applicationData.remove(app) # remove application object from list
                 break
         else:   # if application ID not found
             print("Application not found.")   # print error message
 
     def updateApplicationStatus(self, appID: str, status: str):    # method to update application status
-        for app in applicationData: # iterate through application list
+        for app in self.applicationData: # iterate through application list
             if app.getApplicationID() == appID: # check if application ID matches
                 app.setStatus(status)   # update application status
                 break
@@ -331,14 +322,14 @@ class ManageFinancials:
     def getSales(self) -> entity.Sales: # method to get a sales record
         print("Sales details:") # prompt user to enter sales details
         salesId = input("Enter sales ID: ") # get sales ID
-        for sal in salesData:   # iterate through sales list
+        for sal in self.salesData:   # iterate through sales list
             if sal.getSalesID() == salesId: # check if sales ID matches
                 return sal  # return sales object
         else:   # if sales ID not found
             print("Sales not found.")   # print error message
 
     def getFinancial(self) -> entity.FinancialRecord:   # Method to return the most recent financial record
-        return financialData[-1]
+        return self.financialData[-1]
 
 # Class to Manage Inquiries
 # This class contains methods to add and print inquiry details
@@ -353,11 +344,11 @@ class ManageInquiry:
         print("Enter inquiry details:")  # prompt user to enter inquiry details
         temp.setCustomerID(input("Customer ID: "))  # set customer ID
         temp.setVehicleID(input("Vehicle ID: "))    # set vehicle ID
-        inquiryData.append(temp)    # add inquiry object to list
+        self.inquiryData.append(temp)    # add inquiry object to list
 
     def getInquiry(self): # method to print inquiry details
         print("Inquiry details:")   # Section Header
-        for inq in inquiryData: # iterate through inquiry list
+        for inq in self.inquiryData: # iterate through inquiry list
             print("Customer ID: ", inq.getCustomerID())    # print customer ID
             print("Vehicle ID: ", inq.getVehicleID())   # print vehicle ID
             print("-----------------------------")  # print separator
@@ -375,12 +366,12 @@ class UserLogin:
         print("Enter login details:")   # prompt user to enter login details
         temp.setLoginID(input("loginID: "))    # set username
         temp.setPassword(input("Password: "))  # set password
-        loginData.append(temp)  # add login object to list
+        self.loginData.append(temp)  # add login object to list
 
     def updateLogin(self):  # method to update login details
         print("Update login details:")  # prompt user to enter login details
         loginID = input("Enter login ID to update: ")   # get login ID to update
-        for log in loginData:   # iterate through login list
+        for log in self.loginData:   # iterate through login list
             if log.getLoginID() == loginID:  # check if login ID matches
                 log.setPassword(input("Password: "))    # update password
                 break
@@ -390,7 +381,7 @@ class UserLogin:
     def deleteLogin(self):  # method to delete login details
         print("Delete login details:")  # prompt user to enter login details
         loginID = input("Enter login ID to delete: ")   # get login ID to delete
-        for log in loginData:   # iterate through login list
+        for log in self.loginData:   # iterate through login list
             if log.getLoginID() == loginID: # check if login ID matches
                 loginData.remove(log)   # remove login object from list
                 break
@@ -398,7 +389,7 @@ class UserLogin:
             print("Login not found.")   # print error message
 
     def login(self, loginID: str, password: str) -> bool:    # method to login
-        for log in loginData:   # iterate through login list
+        for log in self.loginData:   # iterate through login list
             if log.getLoginID() == loginID and log.getPassword() == password:    # check if login ID and password matches
                 return True # return true if login successful
         else:   # if login ID or password not found

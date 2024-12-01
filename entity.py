@@ -296,10 +296,6 @@ class Login:
     loginID = ""    # loginID of the user
     password = ""   # password of the user
 
-    def __init__(self, loginID: str, password: str):    # Constructor
-        self.loginID = loginID  # Initialize
-        self.password = password    # Initialize
-
     def getLoginID(self) -> str:    # Getter for loginID
         return self.loginID   # Return loginID
 
