@@ -224,10 +224,10 @@ class Application:
     def setIncome(self, income: float): # Setter for income
         self.income = income    # Set income
 
-    def getApproveDeny(self) -> str: # Getter for approveDeny
+    def getStatus(self) -> str: # Getter for approveDeny
         return self.approveDeny    # Return approveDeny
 
-    def setApproveDeny(self, approveDeny: str): # Setter for approveDeny
+    def setStatus(self, approveDeny: str): # Setter for approveDeny
         self.approveDeny = approveDeny    # Set approveDen
 
 # Lease Entity Class
