@@ -76,7 +76,7 @@ class UI:
     # Menu for Login
     # Contributors: Seth Tourish
     # Date: 12/1/2024
-    def menuLogin(self):
+    def menuLogin(self):    # function for login menu
         print("-----------------------------")  # print separator
         print("Welcome to the Car Dealership System")    # print welcome message
         print("1. Create Login") # print create login option
@@ -89,221 +89,221 @@ class UI:
     # Main Menu for Customer
     # Contributors: Seth Tourish
     # Date: 12/1/2024
-    def menuMainCustomer(self):
-        print("-----------------------------")
-        print("Main Menu")
-        print("1. Inventory")
-        print("2. Inquiries")
-        print("3. Customer Information")
-        print("4. Applications")
-        print("5. Receipts")
-        print("0. Logout")
-        inputChoice = input("Enter Choice: ")
-        print("-----------------------------")
-        return inputChoice
+    def menuMainCustomer(self): # function for main menu for customer
+        print("-----------------------------")  # print separator
+        print("Main Menu")  # print main menu
+        print("1. Inventory")   # print inventory option
+        print("2. Inquiries")   # print inquiries option
+        print("3. Customer Information")    # print customer information option
+        print("4. Applications")    # print applications option
+        print("5. Receipts")    # print receipts option
+        print("0. Logout")  # print logout option
+        inputChoice = input("Enter Choice: ")   # get user input
+        print("-----------------------------")  # print separator
+        return inputChoice  # return user input
 
     # Main Menu for Employee
     # Contributors: Seth Tourish
     # Date: 12/1/2024
-    def menuMainEmployee(self):
-        print("-----------------------------")
-        print("Main Menu")
-        print("1. Inventory")
-        print("2. Inquiries")
-        print("3. Customer Information")
-        print("4. Employee Information")
-        print("5. Applications")
-        print("6. Sales")
-        print("7. Finalize Purchase")
-        print("0. Logout")
-        inputChoice = input("Enter Choice: ")
-        print("-----------------------------")
-        return inputChoice
+    def menuMainEmployee(self): # function for main menu for employee
+        print("-----------------------------")  # print separator
+        print("Main Menu")  # print main menu
+        print("1. Inventory")   # print inventory option
+        print("2. Inquiries")   # print inquiries option
+        print("3. Customer Information")    # print customer information option
+        print("4. Employee Information")    # print employee information option
+        print("5. Applications")    # print applications option
+        print("6. Sales")   # print sales option
+        print("7. Finalize Purchase")   # print finalize purchase option
+        print("0. Logout")  # print logout option
+        inputChoice = input("Enter Choice: ")   # get user input
+        print("-----------------------------")  # print separator
+        return inputChoice  # return user input
 
     # Main Menu for Manager
     # Contributors: Seth Tourish
     # Date: 12/1/2024
-    def menuMainManager(self):
-        print("-----------------------------")
-        print("Main Menu")
-        print("1. Inventory")
-        print("2. Inquiries")
-        print("3. Customer Information")
-        print("4. Employee Information")
-        print("5. Applications")
-        print("6. Sales")
-        print("7. Financials")
-        print("0. Logout")
-        inputChoice = input("Enter Choice: ")
-        print("-----------------------------")
-        return inputChoice
+    def menuMainManager(self):  # function for main menu for manager
+        print("-----------------------------")  # print separator
+        print("Main Menu")  # print main menu
+        print("1. Inventory")   # print inventory option
+        print("2. Inquiries")   # print inquiries option
+        print("3. Customer Information")    # print customer information option
+        print("4. Employee Information")    # print employee information option
+        print("5. Applications")    # print applications option
+        print("6. Sales")   # print sales option
+        print("7. Financials")  # print financials option
+        print("0. Logout")  # print logout option
+        inputChoice = input("Enter Choice: ")   # get user input
+        print("-----------------------------")  # print separator
+        return inputChoice  # return user input
 
     # Menu for Inventory for Customer
     # Contributors: Seth Tourish
     # Date: 12/1/2024
-    def menuInventoryCustomer(self):
-        print("-----------------------------")
-        print("Inventory")
-        print("1. View Inventory")
-        print("0. Back")
-        inputChoice = input("Enter Choice: ")
-        print("-----------------------------")
-        return inputChoice
+    def menuInventoryCustomer(self):    # function for inventory menu for customer
+        print("-----------------------------")  # print separator
+        print("Inventory")  # print inventory
+        print("1. View Inventory")  # print view inventory option
+        print("0. Back")    # print back option
+        inputChoice = input("Enter Choice: ")   # get user input
+        print("-----------------------------")  # print separator
+        return inputChoice  # return user input
     
     # Menu for Inventory for Staff
     # Contributors: Seth Tourish
     # Date: 12/1/2024
-    def menuInventoryStaff(self):
-        print("-----------------------------")
-        print("Inventory")
-        print("1. View Inventory")
-        print("2. Add Inventory")
-        print("3. Remove Inventory")
-        print("4. Update Inventory")
-        print("0. Back")
-        inputChoice = input("Enter Choice: ")
-        print("-----------------------------")
-        return inputChoice
+    def menuInventoryStaff(self):   # function for inventory menu for staff
+        print("-----------------------------")  # print separator
+        print("Inventory")  # print inventory
+        print("1. View Inventory")  # print view inventory option
+        print("2. Add Inventory")   # print add inventory option
+        print("3. Remove Inventory")    # print remove inventory option
+        print("4. Update Inventory")    # print update inventory option
+        print("0. Back")    # print back option
+        inputChoice = input("Enter Choice: ")   # get user input
+        print("-----------------------------")  # print separator
+        return inputChoice  # return user input
     
     # Menu for Inquiries for Customer
     # Contributors: Seth Tourish
     # Date: 12/1/2024
-    def menuInquiriesCustomer(self):
-        print("-----------------------------")
-        print("Inquiries")
-        print("1. Make Inquiry")
-        print("0. Back")
-        inputChoice = input("Enter Choice: ")
-        print("-----------------------------")
-        return inputChoice
+    def menuInquiriesCustomer(self):    # function for inquiries menu for customer
+        print("-----------------------------")  # print separator
+        print("Inquiries")  # print inquiries
+        print("1. Make Inquiry")    # print make inquiry option
+        print("0. Back")    # print back option
+        inputChoice = input("Enter Choice: ")   # get user input
+        print("-----------------------------")  # print separator
+        return inputChoice  # return user input
     
     # Menu for Inquiries for Staff
     # Contributors: Seth Tourish
     # Date: 12/1/2024
-    def menuInquiriesStaff(self):
-        print("-----------------------------")
-        print("Inquiries")
-        print("1. View Inquiries")
-        print("0. Back")
-        inputChoice = input("Enter Choice: ")
-        print("-----------------------------")
-        return inputChoice
+    def menuInquiriesStaff(self):   # function for inquiries menu for staff
+        print("-----------------------------")  # print separator
+        print("Inquiries")  # print inquiries
+        print("1. View Inquiries")  # print view inquiries option
+        print("0. Back")    # print back option
+        inputChoice = input("Enter Choice: ")   # get user input
+        print("-----------------------------")  # print separator
+        return inputChoice  # return user input
 
     # Menu for Customer Information for Customer
     # Contributors: Seth Tourish
     # Date: 12/1/2024
-    def menuCustomerInfoCustomer(self):
-        print("-----------------------------")
-        print("Customer Information")
-        print("1. Add Customer Information")
-        print("2. Update Customer Information")
-        print("0. Back")
-        inputChoice = input("Enter Choice: ")
-        print("-----------------------------")
-        return inputChoice
+    def menuCustomerInfoCustomer(self): # function for customer information menu for customer
+        print("-----------------------------")  # print separator
+        print("Customer Information")   # print customer information
+        print("1. Add Customer Information")    # print add customer information option
+        print("2. Update Customer Information") # print update customer information option
+        print("0. Back")    # print back option
+        inputChoice = input("Enter Choice: ")   # get user input
+        print("-----------------------------")  # print separator
+        return inputChoice  # return user input
     
     # Menu for Customer Information for Staff
     # Contributors: Seth Tourish
     # Date: 12/1/2024
-    def menuCustomerInfoStaff(self):
-        print("-----------------------------")
-        print("Customer Information")
-        print("1. Add Customer Information")
-        print("2. Update Customer Information")
-        print("3. Delete Customer Information")
-        print("0. Back")
-        inputChoice = input("Enter Choice: ")
-        print("-----------------------------")
-        return inputChoice
+    def menuCustomerInfoStaff(self):    # function for customer information menu for staff
+        print("-----------------------------")  # print separator
+        print("Customer Information")   # print customer information
+        print("1. Add Customer Information")    # print add customer information option
+        print("2. Update Customer Information") # print update customer information option
+        print("3. Delete Customer Information") # print delete customer information option
+        print("0. Back")    # print back option
+        inputChoice = input("Enter Choice: ")   # get user input    
+        print("-----------------------------")  # print separator
+        return inputChoice  # return user input
 
     # Menu for Employee Information for Staff
     # Contributors: Seth Tourish
     # Date: 12/1/2024
-    def menuEmployeeInfoStaff(self):
-        print("-----------------------------")
-        print("Employee Information")
-        print("1. Add Employee Information")
-        print("2. Update Employee Information")
-        print("3. Delete Employee Information")
-        print("0. Back")
-        inputChoice = input("Enter Choice: ")
-        print("-----------------------------")
-        return inputChoice
+    def menuEmployeeInfoStaff(self):    # function for employee information menu for staff
+        print("-----------------------------")  # print separator
+        print("Employee Information")   # print employee information
+        print("1. Add Employee Information")    # print add employee information option
+        print("2. Update Employee Information") # print update employee information option
+        print("3. Delete Employee Information") # print delete employee information option
+        print("0. Back")    # print back option
+        inputChoice = input("Enter Choice: ")       # get user input    
+        print("-----------------------------")  # print separator
+        return inputChoice  # return user input
 
     # Menu for Applications for Customer
     # Contributors: Seth Tourish
     # Date: 12/1/2024
-    def menuApplicationsCustomer(self):
-        print("-----------------------------")
-        print("Applications")
-        print("1. Add Application")
-        print("2. Update Application")
-        print("3. View Application Status")
-        print("0. Back")
-        inputChoice = input("Enter Choice: ")
-        print("-----------------------------")
-        return inputChoice
+    def menuApplicationsCustomer(self): # function for applications menu for customer
+        print("-----------------------------")  # print separator
+        print("Applications")   # print applications
+        print("1. Add Application")  # print add application option
+        print("2. Update Application")  # print update application option
+        print("3. View Application Status")   # print view application status option
+        print("0. Back")    # print back option
+        inputChoice = input("Enter Choice: ")   # get user input
+        print("-----------------------------")  # print separator
+        return inputChoice  # return user input
 
     # Menu for Applications for Staff
     # Contributors: Seth Tourish
     # Date: 12/1/2024
-    def menuApplicationsStaff(self):
-        print("-----------------------------")
-        print("Applications")
-        print("1. Create Application")
-        print("2. Delete Application")
-        print("3. Approve Application")
-        print("4. Deny Application")
-        print("0. Back")
-        inputChoice = input("Enter Choice: ")
-        print("-----------------------------")
-        return inputChoice
+    def menuApplicationsStaff(self):    # function for applications menu for staff
+        print("-----------------------------")  # print separator
+        print("Applications")   # print applications
+        print("1. Create Application")  # print create application option
+        print("2. Delete Application")  # print delete application option
+        print("3. Approve Application")     # print approve application option
+        print("4. Deny Application")    # print deny application option
+        print("0. Back")    # print back option
+        inputChoice = input("Enter Choice: ")   # get user input
+        print("-----------------------------")  # print separator
+        return inputChoice  # return user input
 
     # Menu for Financials for Manager
     # Contributors: Seth Tourish
     # Date: 12/1/2024
-    def menuFinancialsManager(self):
-        print("-----------------------------")
-        print("Financials")
-        print("1. Add Financial Information")
-        print("2. Delete Financial Information")
-        print("3. Generate Financial Report")
-        print("0. Back")
-        inputChoice = input("Enter Choice: ")
-        print("-----------------------------")
-        return inputChoice
+    def menuFinancialsManager(self):    # function for financials menu for manager
+        print("-----------------------------")  # print separator
+        print("Financials")   # print financials
+        print("1. Add Financial Information")   # print add financial information option
+        print("2. Delete Financial Information")    # print delete financial information option
+        print("3. Generate Financial Report")   # print generate financial report option
+        print("0. Back")    # print back option
+        inputChoice = input("Enter Choice: ")   # get user input
+        print("-----------------------------")  # print separator
+        return inputChoice      # return user input
 
     # Menu for Staff - Sales Menu
     # Contributors: Seth Tourish
     # Date: 12/1/2024
-    def menuSalesStaff(self):
-        print("-----------------------------")
-        print("Sales")
-        print("1. Add Sale")
-        print("2. Delete Sale")
-        print("3. Update Sale")
-        print("4. Add Lease")
-        print("5. Update Lease")
-        print("6. Delete Lease")
-        print("7. Add Receipt")
-        print("8. Update Receipt")
-        print("9. Delete Receipt")
-        print("0. Back")
-        inputChoice = input("Enter Choice: ")
-        print("-----------------------------")
-        return inputChoice
+    def menuSalesStaff(self):   # function for sales menu for staff
+        print("-----------------------------")  # print separator
+        print("Sales")  # print sales
+        print("1. Add Sale")    # print add sale option
+        print("2. Delete Sale") # print delete sale option
+        print("3. Update Sale") # print update sale option
+        print("4. Add Lease")   # print add lease option
+        print("5. Update Lease")    # print update lease option
+        print("6. Delete Lease")    # print delete lease option
+        print("7. Add Receipt") # print add receipt option
+        print("8. Update Receipt")  # print update receipt option
+        print("9. Delete Receipt")  # print delete receipt option
+        print("0. Back")    # print back option
+        inputChoice = input("Enter Choice: ")   # get user input
+        print("-----------------------------")  # print separator
+        return inputChoice  # return user input
 
     # Menu for Receipts for Customer
     # Contributors: Seth Tourish
     # Date: 12/1/2024
-    def menuReceiptsCustomer(self):
-        print("-----------------------------")
-        print("Receipts")
-        print("1. View Receipts")
-        print("0. Back")
-        inputChoice = input("Enter Choice: ")
-        print("-----------------------------")
-        return inputChoice
+    def menuReceiptsCustomer(self):   # function for receipts menu for customer
+        print("-----------------------------")  # print separator
+        print("Receipts")   # print receipts
+        print("1. View Receipts")   # print view receipts option
+        print("0. Back")    # print back option
+        inputChoice = input("Enter Choice: ")   # get user input
+        print("-----------------------------")  # print separator
+        return inputChoice  # return user input 
 
     # Customer Menu Loop. a Method for the UI class that will display 
     # the customer UI Menus and deal with inputs
@@ -313,54 +313,54 @@ class UI:
     # Contributors: Seth Tourish
     # Date: 12/1/2024
     def customerMenuLoop(self, manageEmployeesController, manageFinancialsController, manageInventoryController, manageCustomersController, manageInquiryController, viewInventoryOBJ, generateFinancialReportOBJ, approveDenyApplicationsOBJ, calcEmployeeCommissionOBJ, viewApplicationResultsOBJ, finalizePurchaseController, loggedIn, userType):
-        while (loggedIn and userType == "Customer"):
-            inputChoice = self.menuMainCustomer()
-            if inputChoice == "1":
-                inputChoiceTwo = self.menuInventoryCustomer()
-                if inputChoiceTwo == "1":
-                    viewInventoryOBJ.viewInventory(manageInventoryController.inventoryData)
-                elif inputChoiceTwo == "0":
-                    continue
-            elif inputChoice == "2":
-                inputChoiceTwo = self.menuInquiriesCustomer()
-                if inputChoiceTwo == "1":
-                    manageInquiryController.addInquiry()
-                elif inputChoiceTwo == "0":
-                    continue
-            elif inputChoice == "3":
-                inputChoiceTwo = self.menuCustomerInfoCustomer()
-                if inputChoiceTwo == "1":
-                    manageCustomersController.addCustomer()
-                elif inputChoiceTwo == "2":
-                    manageCustomersController.updateCustomer()
-                elif inputChoiceTwo == "0":
-                    continue
-            elif inputChoice == "4":
-                inputChoiceTwo = self.menuApplicationsCustomer()
-                if inputChoiceTwo == "1":
-                    manageFinancialsController.addApplication()
-                elif inputChoiceTwo == "2":
-                    manageFinancialsController.updateApplication()
-                elif inputChoiceTwo == "3":
-                    viewApplicationResultsOBJ.viewResult(manageFinancialsController)
-                elif inputChoiceTwo == "0":
-                    continue
-            elif inputChoice == "5":
-                inputChoiceTwo = self.menuReceiptsCustomer()
-                if inputChoiceTwo == "1":
-                    receiptID = input("Enter Customer ID: ")
-                    for rec in manageFinancialsController.receiptData:
-                        if rec.customerID == receiptID:
-                            print("Sales ID: " + rec.salesID)
-                            print("Customer ID: " + rec.customerID)
-                            print("Price: " + rec.price)
-                            print("Lease ID: " + rec.leaseID)
-                elif inputChoiceTwo == "0":
-                    continue
-            elif inputChoice == "0":
-                break
-            else:
-                print("Invalid Choice")
+        while (loggedIn and userType == "Customer"):    # loop while user is logged in and is a customer
+            inputChoice = self.menuMainCustomer()   # get user input
+            if inputChoice == "1":  # if user chooses inventory
+                inputChoiceTwo = self.menuInventoryCustomer()   # get user input
+                if inputChoiceTwo == "1":   # if user chooses view inventory
+                    viewInventoryOBJ.viewInventory(manageInventoryController.inventoryData)   # call viewInventory function
+                elif inputChoiceTwo == "0": # if user chooses back
+                    continue    # continue loop
+            elif inputChoice == "2":    # if user chooses inquiries
+                inputChoiceTwo = self.menuInquiriesCustomer()   # get user input
+                if inputChoiceTwo == "1":   # if user chooses make inquiry
+                    manageInquiryController.addInquiry()    # call addInquiry function
+                elif inputChoiceTwo == "0": # if user chooses back
+                    continue    # continue loop
+            elif inputChoice == "3":    # if user chooses customer information
+                inputChoiceTwo = self.menuCustomerInfoCustomer()    # get user input
+                if inputChoiceTwo == "1":   # if user chooses add customer information
+                    manageCustomersController.addCustomer()  # call addCustomer function
+                elif inputChoiceTwo == "2": # if user chooses update customer information
+                    manageCustomersController.updateCustomer()  # call updateCustomer function
+                elif inputChoiceTwo == "0": # if user chooses back
+                    continue    # continue loop
+            elif inputChoice == "4":    # if user chooses applications
+                inputChoiceTwo = self.menuApplicationsCustomer()    # get user input
+                if inputChoiceTwo == "1":   # if user chooses add application
+                    manageFinancialsController.addApplication()   # call addApplication function
+                elif inputChoiceTwo == "2": # if user chooses update application
+                    manageFinancialsController.updateApplication()  # call updateApplication function
+                elif inputChoiceTwo == "3": # if user chooses view application status
+                    viewApplicationResultsOBJ.viewResult(manageFinancialsController)    # call viewResult function
+                elif inputChoiceTwo == "0": # if user chooses back
+                    continue    # continue loop
+            elif inputChoice == "5":    # if user chooses receipts
+                inputChoiceTwo = self.menuReceiptsCustomer()    # get user input
+                if inputChoiceTwo == "1":   # if user chooses view receipts
+                    receiptID = input("Enter Customer ID: ")    # get customer ID from user
+                    for rec in manageFinancialsController.receiptData:  # iterate through receipt list
+                        if rec.customerID == receiptID: # if customer ID matches
+                            print("Sales ID: " + rec.salesID)   # print sales ID
+                            print("Customer ID: " + rec.customerID) # print customer ID
+                            print("Price: " + rec.price)    # print price
+                            print("Lease ID: " + rec.leaseID)   # print lease ID
+                elif inputChoiceTwo == "0": # if user chooses back
+                    continue    # continue loop
+            elif inputChoice == "0":    # if user chooses logout 
+                break   # break loop
+            else:   # if user enters invalid choice
+                print("Invalid Choice") # print invalid choice
 
     # Employee Menu Loop. a Method for the UI class that will display
     # the employee UI Menus and deal with inputs
@@ -370,91 +370,91 @@ class UI:
     # Contributors: Seth Tourish
     # Date: 12/1/2024
     def employeeMenuLoop(self, manageEmployeesController, manageFinancialsController, manageInventoryController, manageCustomersController, manageInquiryController, viewInventoryOBJ, generateFinancialReportOBJ, approveDenyApplicationsOBJ, calcEmployeeCommissionOBJ, viewApplicationResultsOBJ, finalizePurchaseController, loggedIn, userType):
-        while (loggedIn and userType == "Employee"):
-            inputChoice = self.menuMainEmployee()
-            if inputChoice == "1":
-                inputChoiceTwo = self.menuInventoryStaff()
-                if inputChoiceTwo == "1":
-                    viewInventoryOBJ.viewInventory(manageInventoryController.inventoryData)
-                elif inputChoiceTwo == "2":
-                    manageInventoryController.addInventory()
-                elif inputChoiceTwo == "3":
-                    manageInventoryController.deleteInventory()
-                elif inputChoiceTwo == "4":
-                    manageInventoryController.updateInventory()
-                elif inputChoiceTwo == "0":
-                    continue
-            elif inputChoice == "2":
-                inputChoiceTwo = self.menuInquiriesStaff()
-                if inputChoiceTwo == "1":
-                    for inquiry in manageInquiryController.inquiryData:
-                        print("Customer ID: " + inquiry.customerID)
-                        print("Vehicle ID: " + inquiry.vehicleID)
-                        print("###############")
-                elif inputChoiceTwo == "0":
-                    continue
-            elif inputChoice == "3":
-                inputChoiceTwo = self.menuCustomerInfoStaff()
-                if inputChoiceTwo == "1":
-                    manageCustomersController.addCustomer()
-                elif inputChoiceTwo == "2":
-                    manageCustomersController.updateCustomer()
-                elif inputChoiceTwo == "3":
-                    manageCustomersController.deleteCustomer()
-                elif inputChoiceTwo == "0":
-                    continue
-            elif inputChoice == "4":
-                inputChoiceTwo = self.menuEmployeeInfoStaff()
-                if inputChoiceTwo == "1":
-                    manageEmployeesController.addEmployee()
-                elif inputChoiceTwo == "2":
-                    manageEmployeesController.updateEmployee()
-                elif inputChoiceTwo == "3":
-                    manageEmployeesController.deleteEmployee()
-                elif inputChoiceTwo == "0":
-                    continue
-            elif inputChoice == "5":
-                inputChoiceTwo = self.menuApplicationsStaff()
-                if inputChoiceTwo == "1":
-                    manageFinancialsController.addApplication()
-                elif inputChoiceTwo == "2":
-                    manageFinancialsController.deleteApplication()
-                elif inputChoiceTwo == "3":
-                    appID = input("Enter Application ID to Approve: ")
-                    approveDenyApplicationsOBJ.approveApplication(appID, manageFinancialsController.applicationData)
-                elif inputChoiceTwo == "4":
-                    appID = input("Enter Application ID to Deny: ")
-                    approveDenyApplicationsOBJ.denyApplication(appID, manageFinancialsController.applicationData)
-                elif inputChoiceTwo == "0":
-                    continue
-            elif inputChoice == "6":
-                inputChoiceTwo = self.menuSalesStaff()
-                if inputChoiceTwo == "1":
-                    manageFinancialsController.addSales()
-                elif inputChoiceTwo == "2":
-                    manageFinancialsController.deleteSales()
-                elif inputChoiceTwo == "3":
-                    manageFinancialsController.updateSales()
-                elif inputChoiceTwo == "4":
-                    manageFinancialsController.addLease()
-                elif inputChoiceTwo == "5":
-                    manageFinancialsController.updateLease()
-                elif inputChoiceTwo == "6":
-                    manageFinancialsController.deleteLease()
-                elif inputChoiceTwo == "7":
-                    manageFinancialsController.addReceipt()
-                elif inputChoiceTwo == "8":
-                    manageFinancialsController.updateReceipt()
-                elif inputChoiceTwo == "9":
-                    manageFinancialsController.deleteReceipt()
-                elif inputChoiceTwo == "0":
-                    continue
-            elif inputChoice == "7":
-                finalizePurchaseController.FinalizePurchase(manageFinancialsController, calcEmployeeCommissionOBJ)
-            elif inputChoice == "0":
-                break
-            else:
-                print("Invalid Choice")
+        while (loggedIn and userType == "Employee"):    # loop while user is logged in and is an employee
+            inputChoice = self.menuMainEmployee()   # get user input
+            if inputChoice == "1":  # if user chooses inventory
+                inputChoiceTwo = self.menuInventoryStaff()  # get user input
+                if inputChoiceTwo == "1":   # if user chooses view inventory
+                    viewInventoryOBJ.viewInventory(manageInventoryController.inventoryData)  # call viewInventory function
+                elif inputChoiceTwo == "2": # if user chooses add inventory
+                    manageInventoryController.addInventory()    # call addInventory function
+                elif inputChoiceTwo == "3": # if user chooses remove inventory
+                    manageInventoryController.deleteInventory() # call deleteInventory function
+                elif inputChoiceTwo == "4": # if user chooses update inventory
+                    manageInventoryController.updateInventory() # call updateInventory function
+                elif inputChoiceTwo == "0": # if user chooses back
+                    continue    # continue loop
+            elif inputChoice == "2":    # if user chooses inquiries
+                inputChoiceTwo = self.menuInquiriesStaff()  # get user input
+                if inputChoiceTwo == "1":   # if user chooses view inquiries
+                    for inquiry in manageInquiryController.inquiryData:   # iterate through inquiry list
+                        print("Customer ID: " + inquiry.customerID)   # print customer ID
+                        print("Vehicle ID: " + inquiry.vehicleID)   # print vehicle ID
+                        print("###############")    # print separator
+                elif inputChoiceTwo == "0": # if user chooses back
+                    continue    # continue loop
+            elif inputChoice == "3":    # if user chooses customer information
+                inputChoiceTwo = self.menuCustomerInfoStaff()   # get user input
+                if inputChoiceTwo == "1":   # if user chooses add customer information
+                    manageCustomersController.addCustomer() # call addCustomer function
+                elif inputChoiceTwo == "2": # if user chooses update customer information
+                    manageCustomersController.updateCustomer()  # call updateCustomer function
+                elif inputChoiceTwo == "3": # if user chooses delete customer information
+                    manageCustomersController.deleteCustomer()      # call deleteCustomer function
+                elif inputChoiceTwo == "0": # if user chooses back
+                    continue    # continue loop
+            elif inputChoice == "4":    # if user chooses employee information
+                inputChoiceTwo = self.menuEmployeeInfoStaff()   # get user input
+                if inputChoiceTwo == "1":   # if user chooses add employee information
+                    manageEmployeesController.addEmployee() # call addEmployee function
+                elif inputChoiceTwo == "2": # if user chooses update employee information
+                    manageEmployeesController.updateEmployee()  # call updateEmployee function
+                elif inputChoiceTwo == "3": # if user chooses delete employee information
+                    manageEmployeesController.deleteEmployee()  # call deleteEmployee function
+                elif inputChoiceTwo == "0": # if user chooses back
+                    continue    # continue loop
+            elif inputChoice == "5":    # if user chooses applications
+                inputChoiceTwo = self.menuApplicationsStaff()   # get user input
+                if inputChoiceTwo == "1":   # if user chooses create application
+                    manageFinancialsController.addApplication() # call addApplication function
+                elif inputChoiceTwo == "2": # if user chooses delete application
+                    manageFinancialsController.deleteApplication()  # call deleteApplication function
+                elif inputChoiceTwo == "3": # if user chooses approve application
+                    appID = input("Enter Application ID to Approve: ")  # get application ID from user
+                    approveDenyApplicationsOBJ.approveApplication(appID, manageFinancialsController.applicationData)    # call approveApplication function
+                elif inputChoiceTwo == "4": # if user chooses deny application
+                    appID = input("Enter Application ID to Deny: ") # get application ID from user
+                    approveDenyApplicationsOBJ.denyApplication(appID, manageFinancialsController.applicationData)   # call denyApplication function
+                elif inputChoiceTwo == "0": # if user chooses back  
+                    continue    # continue loop
+            elif inputChoice == "6":    # if user chooses sales
+                inputChoiceTwo = self.menuSalesStaff()  # get user input
+                if inputChoiceTwo == "1":   # if user chooses add sale
+                    manageFinancialsController.addSales()   # call addSales function
+                elif inputChoiceTwo == "2": # if user chooses delete sale
+                    manageFinancialsController.deleteSales()    # call deleteSales function
+                elif inputChoiceTwo == "3": # if user chooses update sale
+                    manageFinancialsController.updateSales()    # call updateSales function
+                elif inputChoiceTwo == "4": # if user chooses add lease
+                    manageFinancialsController.addLease()   # call addLease function
+                elif inputChoiceTwo == "5": # if user chooses update lease
+                    manageFinancialsController.updateLease()    # call updateLease function
+                elif inputChoiceTwo == "6": # if user chooses delete lease
+                    manageFinancialsController.deleteLease()    # call deleteLease function
+                elif inputChoiceTwo == "7": # if user chooses add receipt
+                    manageFinancialsController.addReceipt() # call addReceipt function
+                elif inputChoiceTwo == "8": # if user chooses update receipt
+                    manageFinancialsController.updateReceipt()  # call updateReceipt function
+                elif inputChoiceTwo == "9": # if user chooses delete receipt
+                    manageFinancialsController.deleteReceipt()  # call deleteReceipt function
+                elif inputChoiceTwo == "0": # if user chooses back
+                    continue    # continue loop
+            elif inputChoice == "7":    # if user chooses financials
+                finalizePurchaseController.FinalizePurchase(manageFinancialsController, calcEmployeeCommissionOBJ)  # call FinalizePurchase function
+            elif inputChoice == "0":    # if user chooses logout
+                break   # break loop
+            else:   # if user enters invalid choice
+                print("Invalid Choice") # print invalid choice
 
     # Manager Menu Loop. a Method for the UI class that will display
     # the manager UI Menus and deal with inputs
@@ -464,96 +464,96 @@ class UI:
     # Contributors: Seth Tourish
     # Date: 12/1/2024
     def managerMenuLoop(self, manageEmployeesController, manageFinancialsController, manageInventoryController, manageCustomersController, manageInquiryController, viewInventoryOBJ, generateFinancialReportOBJ, approveDenyApplicationsOBJ, calcEmployeeCommissionOBJ, viewApplicationResultsOBJ, finalizePurchaseController, loggedIn, userType):
-        while (loggedIn and userType == "Manager"):
-            inputChoice = self.menuMainManager()
-            if inputChoice == "1":
-                inputChoiceTwo = self.menuInventoryStaff()
-                if inputChoiceTwo == "1":
-                    viewInventoryOBJ.viewInventory(manageInventoryController.inventoryData)
-                elif inputChoiceTwo == "2":
-                    manageInventoryController.addInventory()
-                elif inputChoiceTwo == "3":
-                    manageInventoryController.deleteInventory()
-                elif inputChoiceTwo == "4":
-                    manageInventoryController.updateInventory()
-                elif inputChoiceTwo == "0":
-                    continue
-            elif inputChoice == "2":
-                inputChoiceTwo = self.menuInquiriesStaff()
-                if inputChoiceTwo == "1":
-                    for inquiry in manageInquiryController.inquiryData:
-                        print("Customer ID: " + inquiry.customerID)
-                        print("Vehicle ID: " + inquiry.vehicleID)
-                        print("###############")
-                elif inputChoiceTwo == "0":
-                    continue
-            elif inputChoice == "3":
-                inputChoiceTwo = self.menuCustomerInfoStaff()
-                if inputChoiceTwo == "1":
-                    manageCustomersController.addCustomer()
-                elif inputChoiceTwo == "2":
-                    manageCustomersController.updateCustomer()
-                elif inputChoiceTwo == "3":
-                    manageCustomersController.deleteCustomer()
-                elif inputChoiceTwo == "0":
-                    continue
-            elif inputChoice == "4":
-                inputChoiceTwo = self.menuEmployeeInfoStaff()
-                if inputChoiceTwo == "1":
-                    manageEmployeesController.addEmployee()
-                elif inputChoiceTwo == "2":
-                    manageEmployeesController.updateEmployee()
-                elif inputChoiceTwo == "3":
-                    manageEmployeesController.deleteEmployee()
-                elif inputChoiceTwo == "0":
-                    continue
-            elif inputChoice == "5":
-                inputChoiceTwo = self.menuApplicationsStaff()
-                if inputChoiceTwo == "1":
-                    manageFinancialsController.addApplication()
-                elif inputChoiceTwo == "2":
-                    manageFinancialsController.deleteApplication()
-                elif inputChoiceTwo == "3":
-                    appID = input("Enter Application ID to Approve: ")
-                    approveDenyApplicationsOBJ.approveApplication(appID, manageFinancialsController)
-                elif inputChoiceTwo == "4":
-                    appID = input("Enter Application ID to Deny: ")
-                    approveDenyApplicationsOBJ.denyApplication(appID, manageFinancialsController)
-                elif inputChoiceTwo == "0":
-                    continue
-            elif inputChoice == "6":
-                inputChoiceTwo = self.menuSalesStaff()
-                if inputChoiceTwo == "1":
-                    manageFinancialsController.addSales()
-                elif inputChoiceTwo == "2":
-                    manageFinancialsController.deleteSales()
-                elif inputChoiceTwo == "3":
-                    manageFinancialsController.updateSales()
-                elif inputChoiceTwo == "4":
-                    manageFinancialsController.addLease()
-                elif inputChoiceTwo == "5":
-                    manageFinancialsController.updateLease()
-                elif inputChoiceTwo == "6":
-                    manageFinancialsController.deleteLease()
-                elif inputChoiceTwo == "7":
-                    manageFinancialsController.addReceipt()
-                elif inputChoiceTwo == "8":
-                    manageFinancialsController.updateReceipt()
-                elif inputChoiceTwo == "9":
-                    manageFinancialsController.deleteReceipt()
-                elif inputChoiceTwo == "0":
-                    continue
-            elif inputChoice == "7":
-                inputChoiceTwo = self.menuFinancialsManager()
-                if inputChoiceTwo == "1":
-                    manageFinancialsController.addFinancial()
-                elif inputChoiceTwo == "2":
-                    manageFinancialsController.deleteFinancial()
-                elif inputChoiceTwo == "3":
-                    generateFinancialReportOBJ.generateReport(manageFinancialsController.getFinancial())    
-                elif inputChoiceTwo == "0":
-                    continue
-            elif inputChoice == "0":
-                break
-            else:
-                print("Invalid Choice")
+        while (loggedIn and userType == "Manager"):   # loop while user is logged in and is a manager
+            inputChoice = self.menuMainManager()    # get user input
+            if inputChoice == "1":  # if user chooses inventory
+                inputChoiceTwo = self.menuInventoryStaff()  # get user input
+                if inputChoiceTwo == "1":   # if user chooses view inventory
+                    viewInventoryOBJ.viewInventory(manageInventoryController.inventoryData) # call viewInventory function
+                elif inputChoiceTwo == "2": # if user chooses add inventory
+                    manageInventoryController.addInventory()    # call addInventory function
+                elif inputChoiceTwo == "3": # if user chooses remove inventory
+                    manageInventoryController.deleteInventory() # call deleteInventory function
+                elif inputChoiceTwo == "4": # if user chooses update inventory
+                    manageInventoryController.updateInventory() # call updateInventory function
+                elif inputChoiceTwo == "0": # if user chooses back
+                    continue    # continue loop
+            elif inputChoice == "2":    # if user chooses inquiries
+                inputChoiceTwo = self.menuInquiriesStaff()  # get user input
+                if inputChoiceTwo == "1":   # if user chooses view inquiries
+                    for inquiry in manageInquiryController.inquiryData:  # iterate through inquiry list
+                        print("Customer ID: " + inquiry.customerID)  # print customer ID
+                        print("Vehicle ID: " + inquiry.vehicleID)   # print vehicle ID
+                        print("###############")    # print separator
+                elif inputChoiceTwo == "0": # if user chooses back
+                    continue    # continue loop
+            elif inputChoice == "3":    # if user chooses customer information
+                inputChoiceTwo = self.menuCustomerInfoStaff()   # get user input
+                if inputChoiceTwo == "1":   # if user chooses add customer information
+                    manageCustomersController.addCustomer() # call addCustomer function
+                elif inputChoiceTwo == "2": # if user chooses update customer information
+                    manageCustomersController.updateCustomer()  # call updateCustomer function
+                elif inputChoiceTwo == "3":     # if user chooses delete customer information
+                    manageCustomersController.deleteCustomer()  # call deleteCustomer function
+                elif inputChoiceTwo == "0": # if user chooses back
+                    continue    # continue loop
+            elif inputChoice == "4":    # if user chooses employee information
+                inputChoiceTwo = self.menuEmployeeInfoStaff()   # get user input
+                if inputChoiceTwo == "1":   # if user chooses add employee information
+                    manageEmployeesController.addEmployee() # call addEmployee function
+                elif inputChoiceTwo == "2": # if user chooses update employee information
+                    manageEmployeesController.updateEmployee()  # call updateEmployee function
+                elif inputChoiceTwo == "3": # if user chooses delete employee information
+                    manageEmployeesController.deleteEmployee()  # call deleteEmployee function
+                elif inputChoiceTwo == "0": # if user chooses back
+                    continue    # continue loop
+            elif inputChoice == "5":    # if user chooses applications
+                inputChoiceTwo = self.menuApplicationsStaff()   # get user input
+                if inputChoiceTwo == "1":   # if user chooses create application
+                    manageFinancialsController.addApplication() # call addApplication function
+                elif inputChoiceTwo == "2": # if user chooses delete application
+                    manageFinancialsController.deleteApplication()  # call deleteApplication function
+                elif inputChoiceTwo == "3": # if user chooses approve application
+                    appID = input("Enter Application ID to Approve: ")  # get application ID from user
+                    approveDenyApplicationsOBJ.approveApplication(appID, manageFinancialsController)    # call approveApplication function
+                elif inputChoiceTwo == "4": # if user chooses deny application
+                    appID = input("Enter Application ID to Deny: ") # get application ID from user
+                    approveDenyApplicationsOBJ.denyApplication(appID, manageFinancialsController)   # call denyApplication function
+                elif inputChoiceTwo == "0": # if user chooses back
+                    continue    # continue loop
+            elif inputChoice == "6":    # if user chooses sales
+                inputChoiceTwo = self.menuSalesStaff()  # get user input
+                if inputChoiceTwo == "1":   # if user chooses add sale
+                    manageFinancialsController.addSales()   # call addSales function
+                elif inputChoiceTwo == "2": # if user chooses delete sale
+                    manageFinancialsController.deleteSales()    # call deleteSales function
+                elif inputChoiceTwo == "3": # if user chooses update sale
+                    manageFinancialsController.updateSales()    # call updateSales function
+                elif inputChoiceTwo == "4": # if user chooses add lease
+                    manageFinancialsController.addLease()   # call addLease function
+                elif inputChoiceTwo == "5": # if user chooses update lease
+                    manageFinancialsController.updateLease()    # call updateLease function
+                elif inputChoiceTwo == "6": # if user chooses delete lease
+                    manageFinancialsController.deleteLease()    # call deleteLease function
+                elif inputChoiceTwo == "7": # if user chooses add receipt
+                    manageFinancialsController.addReceipt() # call addReceipt function
+                elif inputChoiceTwo == "8": # if user chooses update receipt
+                    manageFinancialsController.updateReceipt()  # call updateReceipt function
+                elif inputChoiceTwo == "9": # if user chooses delete receipt
+                    manageFinancialsController.deleteReceipt()  # call deleteReceipt function
+                elif inputChoiceTwo == "0": # if user chooses back
+                    continue    # continue loop
+            elif inputChoice == "7":    # if user chooses financials
+                inputChoiceTwo = self.menuFinancialsManager()   # get user input
+                if inputChoiceTwo == "1":   # if user chooses add financial information
+                    manageFinancialsController.addFinancial()   # call addFinancial function
+                elif inputChoiceTwo == "2": # if user chooses delete financial information
+                    manageFinancialsController.deleteFinancial()    # call deleteFinancial function
+                elif inputChoiceTwo == "3": # if user chooses generate financial report
+                    generateFinancialReportOBJ.generateReport(manageFinancialsController.getFinancial())    # call generateReport function
+                elif inputChoiceTwo == "0": # if user chooses back
+                    continue    # continue loop
+            elif inputChoice == "0":    # if user chooses logout
+                break   # break loop
+            else:   # if user enters invalid choice
+                print("Invalid Choice") # print invalid choice
