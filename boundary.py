@@ -62,9 +62,16 @@ class ViewApplicationResults:
                 print("-----------------------------")  # print separator
 
 # Class for the User Interface
-#Contributors: Seth Tourish
-#Date: 12/1/2024
+# This class will be used to display the UI Menus and deal with inputs
+# Methods include menuLogin, menuMainCustomer, menuMainEmployee, menuMainManager, menuInventoryCustomer, menuInventoryStaff, menuInquiriesCustomer, menuInquiriesStaff, 
+# menuCustomerInfoCustomer, menuCustomerInfoStaff, menuEmployeeInfoStaff, menuApplicationsCustomer, menuApplicationsStaff, menuFinancialsManager, menuSalesStaff, 
+# menuReceiptsCustomer, customerMenuLoop, employeeMenuLoop
+# Contributors: Seth Tourish
+# Date: 12/1/2024
 class UI:
+    # Menu for Login
+    # Contributors: Seth Tourish
+    # Date: 12/1/2024
     def menuLogin(self):
         print("-----------------------------")  # print separator
         print("Welcome to the Car Dealership System")    # print welcome message
@@ -75,6 +82,9 @@ class UI:
         print("-----------------------------")
         return inputChoice  # return user input
     
+    # Main Menu for Customer
+    # Contributors: Seth Tourish
+    # Date: 12/1/2024
     def menuMainCustomer(self):
         print("-----------------------------")
         print("Main Menu")
@@ -88,6 +98,9 @@ class UI:
         print("-----------------------------")
         return inputChoice
 
+    # Main Menu for Employee
+    # Contributors: Seth Tourish
+    # Date: 12/1/2024
     def menuMainEmployee(self):
         print("-----------------------------")
         print("Main Menu")
@@ -102,6 +115,9 @@ class UI:
         print("-----------------------------")
         return inputChoice
 
+    # Main Menu for Manager
+    # Contributors: Seth Tourish
+    # Date: 12/1/2024
     def menuMainManager(self):
         print("-----------------------------")
         print("Main Menu")
@@ -117,6 +133,9 @@ class UI:
         print("-----------------------------")
         return inputChoice
 
+    # Menu for Inventory for Customer
+    # Contributors: Seth Tourish
+    # Date: 12/1/2024
     def menuInventoryCustomer(self):
         print("-----------------------------")
         print("Inventory")
@@ -126,6 +145,9 @@ class UI:
         print("-----------------------------")
         return inputChoice
     
+    # Menu for Inventory for Staff
+    # Contributors: Seth Tourish
+    # Date: 12/1/2024
     def menuInventoryStaff(self):
         print("-----------------------------")
         print("Inventory")
@@ -138,6 +160,9 @@ class UI:
         print("-----------------------------")
         return inputChoice
     
+    # Menu for Inquiries for Customer
+    # Contributors: Seth Tourish
+    # Date: 12/1/2024
     def menuInquiriesCustomer(self):
         print("-----------------------------")
         print("Inquiries")
@@ -147,6 +172,9 @@ class UI:
         print("-----------------------------")
         return inputChoice
     
+    # Menu for Inquiries for Staff
+    # Contributors: Seth Tourish
+    # Date: 12/1/2024
     def menuInquiriesStaff(self):
         print("-----------------------------")
         print("Inquiries")
@@ -156,6 +184,9 @@ class UI:
         print("-----------------------------")
         return inputChoice
 
+    # Menu for Customer Information for Customer
+    # Contributors: Seth Tourish
+    # Date: 12/1/2024
     def menuCustomerInfoCustomer(self):
         print("-----------------------------")
         print("Customer Information")
@@ -166,6 +197,9 @@ class UI:
         print("-----------------------------")
         return inputChoice
     
+    # Menu for Customer Information for Staff
+    # Contributors: Seth Tourish
+    # Date: 12/1/2024
     def menuCustomerInfoStaff(self):
         print("-----------------------------")
         print("Customer Information")
@@ -177,6 +211,9 @@ class UI:
         print("-----------------------------")
         return inputChoice
 
+    # Menu for Employee Information for Staff
+    # Contributors: Seth Tourish
+    # Date: 12/1/2024
     def menuEmployeeInfoStaff(self):
         print("-----------------------------")
         print("Employee Information")
@@ -188,6 +225,9 @@ class UI:
         print("-----------------------------")
         return inputChoice
 
+    # Menu for Applications for Customer
+    # Contributors: Seth Tourish
+    # Date: 12/1/2024
     def menuApplicationsCustomer(self):
         print("-----------------------------")
         print("Applications")
@@ -198,6 +238,9 @@ class UI:
         print("-----------------------------")
         return inputChoice
 
+    # Menu for Applications for Staff
+    # Contributors: Seth Tourish
+    # Date: 12/1/2024
     def menuApplicationsStaff(self):
         print("-----------------------------")
         print("Applications")
@@ -210,6 +253,9 @@ class UI:
         print("-----------------------------")
         return inputChoice
 
+    # Menu for Financials for Manager
+    # Contributors: Seth Tourish
+    # Date: 12/1/2024
     def menuFinancialsManager(self):
         print("-----------------------------")
         print("Financials")
@@ -221,6 +267,9 @@ class UI:
         print("-----------------------------")
         return inputChoice
 
+    # Menu for Staff - Sales Menu
+    # Contributors: Seth Tourish
+    # Date: 12/1/2024
     def menuSalesStaff(self):
         print("-----------------------------")
         print("Sales")
@@ -238,6 +287,9 @@ class UI:
         print("-----------------------------")
         return inputChoice
 
+    # Menu for Receipts for Customer
+    # Contributors: Seth Tourish
+    # Date: 12/1/2024
     def menuReceiptsCustomer(self):
         print("-----------------------------")
         print("Receipts")
@@ -247,6 +299,13 @@ class UI:
         print("-----------------------------")
         return inputChoice
 
+    # Customer Menu Loop. a Method for the UI class that will display 
+    # the customer UI Menus and deal with inputs
+    # Parameters are the manageEmployeesController, manageFinancialsController, manageInventoryController, manageCustomersController, 
+    # manageInquiryController, viewInventoryOBJ, generateFinancialReportOBJ, approveDenyApplicationsOBJ, calcEmployeeCommissionOBJ, 
+    # viewApplicationResultsOBJ, loggedIn, userType
+    # Contributors: Seth Tourish
+    # Date: 12/1/2024
     def customerMenuLoop(self, manageEmployeesController, manageFinancialsController, manageInventoryController, manageCustomersController, manageInquiryController, viewInventoryOBJ, generateFinancialReportOBJ, approveDenyApplicationsOBJ, calcEmployeeCommissionOBJ, viewApplicationResultsOBJ, loggedIn, userType):
         while (loggedIn and userType == "Customer"):
             inputChoice = self.menuMainCustomer()
@@ -295,6 +354,13 @@ class UI:
             else:
                 print("Invalid Choice")
 
+    # Employee Menu Loop. a Method for the UI class that will display
+    # the employee UI Menus and deal with inputs
+    # Parameters are the manageEmployeesController, manageFinancialsController, manageInventoryController, manageCustomersController,
+    # manageInquiryController, viewInventoryOBJ, generateFinancialReportOBJ, approveDenyApplicationsOBJ, calcEmployeeCommissionOBJ,
+    # viewApplicationResultsOBJ, loggedIn, userType
+    # Contributors: Seth Tourish
+    # Date: 12/1/2024
     def employeeMenuLoop(self, manageEmployeesController, manageFinancialsController, manageInventoryController, manageCustomersController, manageInquiryController, viewInventoryOBJ, generateFinancialReportOBJ, approveDenyApplicationsOBJ, calcEmployeeCommissionOBJ, viewApplicationResultsOBJ, loggedIn, userType):
         while (loggedIn and userType == "Employee"):
             inputChoice = self.menuMainEmployee()
