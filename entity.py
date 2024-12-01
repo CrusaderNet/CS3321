@@ -37,10 +37,10 @@ class Employee:
         self.commissions = commissions    # Set commissions
     
     def getSaleID(self) -> []: # Getter for saleID
-        return self.saleID
+        return self.saleID   # Return saleID
 
     def setSaleID(self, saleID: []): # Setter for saleID
-        self.saleID = saleID
+        self.saleID = saleID  # Set saleID
 
 
 # Customer Entity Class
