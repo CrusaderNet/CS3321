@@ -375,7 +375,7 @@ class UserLogin:
     def addLogin(self): # method to add login details
         temp = entity.Login()   # create a new login object
         print("Enter login details:")   # prompt user to enter login details
-        temp.setLoginID(input("loginID: "))    # set username
+        temp.setLoginID(input("loginID (First Character E, M, or C depending on user role): "))    # set username
         temp.setPassword(input("Password: "))  # set password
         self.loginData.append(temp)  # add login object to list
 
