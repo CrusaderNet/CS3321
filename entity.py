@@ -12,12 +12,6 @@ class Employee:
     commissions = 0.0 # commissions of the employee
     saleID = [] # saleIDs of the sales made by the employee
 
-    def __init__(self, employeeID: str, employeeName: str, commissions: float, saleID: []): # Constructor
-        self.employeeID = employeeID
-        self.employeeName = employeeName
-        self.commissions = commissions
-        self.saleID = saleID
-
     def getEmployeeID(self) -> int: # Getter for employeeID
         return self.employeeID  # Return employeeID
     
@@ -54,13 +48,6 @@ class Customer:
     customerName = ""   # customerName of the customer
     applicationID = 0   # applicationID of the customer's application
     leaseID = 0 # leaseID of the customer's lease
-
-    def __init__(self, customerID: int, address: str, customerName: str, applicationID: int, leaseID: int): # Constructor
-        self.customerID = customerID
-        self.applicationID = applicationID
-        self.address = address
-        self.customerName = customerName
-        self.leaseID = leaseID
     
     def getCustomerID(self) -> int: # Getter for customerID
         return self.customerID  # Return customerID
@@ -106,16 +93,6 @@ class Sales:
     commissions = 0.0 # commissions of the salesperson
     receiptID = 0 # receiptID of the sale
     price = 0.0 # price of the vehicle
-
-    def __init__(self, saleID: int, employeeID: int, customerID: int, leaseID: int, applicationID: int, commissions: float, receiptID: int, price: float): # Constructor
-        self.saleID = saleID
-        self.employeeID = employeeID
-        self.customerID = customerID
-        self.leaseID = leaseID
-        self.applicationID = applicationID
-        self.commissions = commissions
-        self.receiptID = receiptID
-        self.price = price
 
     def getSaleID(self) -> int: # Getter for saleID
         return self.saleID  # Return saleID
@@ -178,15 +155,6 @@ class Application:
     price = 0.0 # price of the vehicle
     income = 0.0 # income of the customer
     approveDeny = '' # approveDeny status of the application (Char)
-
-    def __init__(self, applicationID: int, customerID: int, saleID: int, creditScore: int, price: float, income: float, approveDeny: str): # Constructor
-        self.applicationID = applicationID 
-        self.customerID = customerID
-        self.saleID = saleID
-        self.creditScore = creditScore
-        self.price = price
-        self.income = income
-        self.approveDeny = approveDeny
     
     def getApplicationID(self) -> int: # Getter for applicationID
         return self.applicationID   # Return applicationID
@@ -242,14 +210,6 @@ class Lease:
     monthlyPayment = 0.0 # monthlyPayment of the lease
     price = 0.0 # price of the vehicle
     termLength = 0 # termLength of the lease
-
-    def __init__(self, leaseID: int, customerID: int, vehicleID: int, monthlyPayment: float, price: float, termLength: int): # Constructor
-        self.leaseID = leaseID
-        self.customerID = customerID
-        self.vehicleID = vehicleID
-        self.monthlyPayment = monthlyPayment
-        self.price = price
-        self.termLength = termLength
 
     def getLeaseID(self) -> int: # Getter for leaseID
         return self.leaseID    # Return leaseID
@@ -318,12 +278,6 @@ class Receipt:
     customerID = 0 # customerID of the customer
     price = 0.0 # price of the vehicle
     leaseID = 0 # leaseID of the lease
-
-    def __init__(self, salesID: int, customerID: int, price: float, leaseID: int): # Constructor
-        self.salesID = salesID
-        self.customerID = customerID
-        self.price = price
-        self.leaseID = leaseID
     
     def getSalesID(self) -> int: # Getter for salesID
         return self.salesID # Return salesID
@@ -359,11 +313,6 @@ class FinancialRecord:
     revenue = 0.0   # revenue of the company
     expenses = 0.0  # expenses of the company
 
-    def __init__(self, budget: float, revenue: float, expenses: float):    # Constructor
-        self.budget = budget    # Initialize
-        self.revenue = revenue  # Initialize
-        self.expenses = expenses    # Initialize
-
     def getBudget(self) -> float:    # Getter for budget
         return self.budget  # Return budget
 
@@ -390,10 +339,6 @@ class FinancialRecord:
 class Inquiry:
     customerID = 0 # customerID of the customer
     vehicleID = 0 # vehicleID of the vehicle
-
-    def __init__(self, customerID: int, vehicleID: int): # Constructor
-        self.customerID = customerID
-        self.vehicleID = vehicleID
     
     def getCustomerID(self) -> int: # Getter for customerID
         return self.customerID  # Return customerID
@@ -416,11 +361,6 @@ class Inventory:
     vehicleID = 0 # vehicleID of the vehicle
     purchasePrice = 0.0 # purchasePrice of the vehicle
     salesPrice = 0.0 # salePrice of the vehicle
-
-    def __init__(self, vehicleID: int, purchasePrice: float, salesPrice: float): # Constructor
-        self.vehicleID = vehicleID
-        self.purchasePrice = purchasePrice
-        self.salesPrice = salesPrice
 
     def getVehicleID(self) -> int: # Getter for vehicleID
         return self.vehicleID    # Return vehicleID
@@ -449,11 +389,6 @@ class ServiceRecord:
     serviceID = 0 # serviceID of the service
     vehicleID = 0 # vehicleID of the vehicle
     servicePrice = 0.0 # servicePrice of the service
-
-    def __init__(self, serviceID: int, vehicleID: int, servicePrice: float): # Constructor
-        self.serviceID = serviceID
-        self.vehicleID = vehicleID
-        self.servicePrice = servicePrice
 
     def getServiceID(self) -> int: # Getter for serviceID
         return self.serviceID    # Return serviceID
