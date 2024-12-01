@@ -37,7 +37,6 @@ class ManageEmployees:
         else: # if employee ID not found
             print("Employee not found.") # print error message
 
-
 # Class to manage Inventory
 # This class contains methods to add, update and delete inventory details, and service record details
 # The inventory details are stored in a list of inventory objects and service record details are stored in a list of service record objects
@@ -154,7 +153,6 @@ class ManageCustomers:
                 break
         else:   # if customer ID not found
             print("Customer not found.")    # print error message
-
 
 # Class to Manage Financials
 # This class contains methods to add, update and delete receipt, lease, sales, financial and application details
@@ -343,6 +341,10 @@ class ManageFinancials:
         return financialData[-1]
 
 # Class to Manage Inquiries
+# This class contains methods to add and print inquiry details
+# The inquiry details are stored in a list of inquiry objects
+# Contributors: Seth Tourish
+# Date: 11/30/2024
 class ManageInquiry:
     inquiryData = [] # list of inquiry objects
 
@@ -361,6 +363,10 @@ class ManageInquiry:
             print("-----------------------------")  # print separator
 
 # Method to Control User Logins
+# This class contains methods to add, update, delete and login user details
+# The user details are stored in a list of login objects
+# Contributors: Seth Tourish
+# Date: 11/30/2024
 class UserLogin:
     loginData = []  # list of login objects
 
