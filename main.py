@@ -54,35 +54,3 @@ while True: # loop until user logs in
         break   # break loop
     else:   # if user enters invalid choice
         print("Invalid Choice")   # print invalid choice message
-
-
-
-# We gather here today
-# To mourn the passing of the code
-# That was once so great
-# But now is no more
-# It was a good code
-# It was a great code
-# It was the best code
-# But now it is gone
-# It was a code that was loved
-# It was a code that was cherished
-# It was a code that was admired
-# But now it is no more
-# So let us remember the code
-# Let us remember the good times
-# Let us remember the great times
-# But let us also remember
-# That all code must die
-# And so we say goodbye
-# To the code that was once so great
-# And we move on
-# To the code that will be even greater
-# So let us remember the code
-# And let us move on
-# To the code that will be
-# The best code of all
-# Goodbye old code
-# Hello new code
-# Contributors: Copilot
-# Date: 12/1/2024
